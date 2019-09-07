@@ -1,0 +1,119 @@
+@charset "UTF-8";
+ *{margin: 0;padding: 0;}
+ #container{
+ position: absolute;
+ top:40px;
+ left:45px;
+ }
+.display_hportrait img{
+border-radius: 30px;
+}
+ul li{
+list-style: none;
+margin: 5px auto;
+}
+ul li .display{
+width:500px;
+border: 1px solid #ccc;
+position: relative;
+border-radius: 10px;
+}
+ul li .comment{
+width:500px;
+border: 1px solid #ccc;
+position: relative;
+border-radius: 10px;
+display: none;
+}
+ul li .reply{
+width:500px;
+border: 1px solid #ccc;
+position: relative;
+border-radius: 10px;
+display: none;
+}
+.display .display_username{
+position: absolute;
+left:100px;
+top:10px;
+}
+.display .display_attention{
+position: absolute;
+left:400px;
+top:5px;
+
+}
+.display .display_username .display_username_time{
+opacity:0.4;
+}
+.display .display_type{
+position: absolute;
+left:20px;
+top:80px;
+width:20px;
+font-size: 28px;
+opacity:0.6;
+bottom: 10px;
+}
+.display .display_content{
+margin: 5px auto;
+padding-left: 100px;
+}
+.display .display_photo{
+margin: 5px auto;
+padding-left: 100px;
+}
+.display .display_comment{
+position:absolute;
+bottom:10px;
+left:380px;
+}
+.comment input[type="text"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 10px 20px;
+  background: #CCCCFF;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 5px 0px;
+  width: 70%;
+  -webkit-appearance: none;
+}
+.comment input[type="submit"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 10px 0; 
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 5px 0px;
+  width: 10%;
+  -webkit-appearance: none;
+}
+.comment input[type="reset"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 10px 0; 
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 5px 0px;
+  width: 10%;
+  -webkit-appearance: none;
+}
+ #type{
+  height: 30px;
+  width: 500px; 
+  background: gray;
+  position:  fixed;
+  z-index: 5;
+  text-align: center;
+  line-height: 30px;
+  left: 45px;
+}

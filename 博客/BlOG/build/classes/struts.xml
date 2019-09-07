@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+      <constant name="struts.multipart.saveDir" value="D:/upload"></constant>
+      <package name="default" namespace="/" extends="struts-default">
+       <action name="RegistAction" class="nuc.action.RegistAction" method="RegistMethod">
+            <param name="savePath">C:/Users/lishuyu/eclipse-workspace/blog/WebContent/hportrait</param>
+            <result name="registOK">
+              /UserLogin.jsp
+            </result>
+            <result name="input">
+              /UserLogin.jsp
+            </result>
+        </action>
+       <action name="UpdateRegistAction" class="nuc.action.RegistAction" method="UpdateRegistMethod">
+            <result name="success">
+              /updatepersonalinfo.jsp
+            </result>
+        </action>
+       <action name="UpdateRegistUserAction" class="nuc.action.RegistAction" method="UpdateRegistUserMethod">
+            <result name="success" type="chain">
+              RBCAttentionAction
+            </result>
+        </action>
+       <action name="BlogAction" class="nuc.action.BlogAction" method="BlogMethod">
+            <param name="savePath">C:/Users/lishuyu/eclipse-workspace/blog/WebContent/contentphoto</param>
+            <result name="blogOK">
+              /blog_display.jsp
+            </result>
+        </action>
+       <action name="LoginAction" class="nuc.action.LoginAction" method="LoginMethod">
+            <result name="loginOK">
+              /blog_homepage.jsp
+            </result>
+            <result name="login">
+              /UserLogin.jsp
+            </result>
+        </action>
+       <action name="ListBlogAction" class="nuc.action.BlogAction" method="ListBlogMethod">
+            <result name="listblogOk">
+              /blog_display.jsp
+            </result>
+        </action>
+       <action name="RBCAttentionAction" class="nuc.action.RBCAttentionAction" method="RBCAttentionMethod">
+            <result name="success">
+              /personlinfo_display.jsp
+            </result>
+        </action>
+       <action name="ListBlogTypeAction" class="nuc.action.BlogAction" method="ListBlogTypeMethod">
+            <result name="listblogtypeOk">
+              /blog_display.jsp
+            </result>
+        </action>
+       <action name="AddAttentionAction" class="nuc.action.AttentionAction" method="AddAttentionMethod">
+            <result name="success">
+              /blog_display.jsp
+            </result>
+        </action>
+       <action name="DeleteAttentionAction" class="nuc.action.AttentionAction" method="DeleteAttentionMethod">
+            <result name="success">
+              /blog_display.jsp
+            </result>
+        </action>
+       <action name="AddCommentAction" class="nuc.action.CommentAction" method="AddCommentMethod">
+            <result name="success">
+              /blog_display.jsp
+            </result>
+        </action>
+        <action name="DeleteCommentAction" class="nuc.action.CommentAction" method="DeleteCommentMethod">
+            <result name="success">
+              /blog_display.jsp
+            </result>
+        </action>
+        <action name="DeleteBlogAction" class="nuc.action.BlogAction" method="DeleteBlogMethod">
+            <result name="success">
+              /blog_display.jsp
+            </result>
+        </action>
+    </package>
+
+</struts>

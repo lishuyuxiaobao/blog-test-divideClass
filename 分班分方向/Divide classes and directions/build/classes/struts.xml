@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+      <package name="default" namespace="/" extends="struts-default">
+      
+      <action name="LoginAction" class="nuc.action.LoginAction" method="LoginMethod">
+            <result name="success">
+              /student_interface.jsp
+            </result>
+            <result name="adminOK">
+              /admin_interface.jsp
+            </result>
+        </action>
+      
+       <action name="AddDirectionAction" class="nuc.action.DivideDirectionAction" method="AddDirectionMethod">
+            <result name="success">
+              /add_direction.jsp
+            </result>
+        </action>
+        
+       <action name="AddCompanyAction" class="nuc.action.DivideCompanyAction" method="AddCompanyMethod">
+            <result name="success">
+              /add_company.jsp
+            </result>
+        </action>
+        
+        <action name="AddDirectionListAction" class="nuc.action.DivideDirectionAction" method="AddDirectionListMethod">
+            <result name="success">
+              /success.jsp
+            </result>
+        </action>
+        
+       <action name="SelectDirectionAction" class="nuc.action.DivideDirectionAction" method="SelectDirectionMethod">
+            <result name="listOK">
+              /direction_operation.jsp
+            </result>
+        </action>
+        
+       <action name="adddirectionAction" class="nuc.action.DivideDirectionAction" method="adddirectionMethod">
+            <result name="listOK">
+              /add_direction.jsp
+            </result>
+        </action>
+        
+       <action name="addcompanyAction" class="nuc.action.DivideCompanyAction" method="addcompanyMethod">
+            <result name="listOK">
+              /add_company.jsp
+            </result>
+        </action>
+        
+       <action name="SelectOpenDirectionAction" class="nuc.action.DivideDirectionAction" method="SelectOpenDirectionMethod">
+            <result name="listopenOK">
+              /choose_direction.jsp
+            </result>
+        </action>
+        
+        <action name="SelectDirectionNumAction" class="nuc.action.DivideDirectionAction" method="SelectDirectionNumMethod">
+            <result name="listnumsOK">
+              /success.jsp
+            </result>
+        </action>
+        
+       <action name="DirectionOperationAction" class="nuc.action.DivideDirectionAction" method="DirectionOperationMethod">
+            <result name="success">
+              /direction_operation.jsp
+            </result>
+        </action>
+        
+       <action name="DivideCompanyAction" class="nuc.action.DivideCompanyAction" method="DivideCompanyMethod">
+            <result name="success">
+              /choose_company.jsp
+            </result>
+        </action>
+        
+       <action name="MutilDivideCompanyAction" class="nuc.action.DivideCompanyAction" method="MutilDivideCompanyMethod">
+            <result name="success">
+              /choose_company.jsp
+            </result>
+        </action>
+ 
+        <action name="direction1" class="nuc.action.DivideClasss" method="direct">
+            <result name="ok">
+              /Getdirection.jsp
+            </result>
+        </action>
+        
+         <action name="direction2" class="nuc.action.DivideClasss" method="Dclass">
+            <result name="Dok">
+              /Getdirection.jsp
+            </result>
+        </action>
+        
+        <action name="getnum" class="nuc.action.DivideClasss" method="GetNum">
+            <result name="success">
+              /getnum.jsp
+            </result>
+        </action>
+        
+        <action name="ListStudentAction" class="nuc.action.LookStudentAction" method="ListStudentMethod">
+            <result name="listOK">
+              /list_student.jsp
+            </result>
+        </action>
+        
+        <action name="SelectStudentAction" class="nuc.action.LookStudentAction" method="SelectStudentMethod">
+            <result name="success">
+              /find_student.jsp
+            </result>
+        </action>
+        
+        <action name="PersonalAction" class="nuc.action.PersonalAction" method="PersonalMethod">
+            <result name="success">
+              /personal_info.jsp
+            </result>
+        </action>
+        
+        <action name="deleteallAction" class="nuc.action.StudentAction" method="deleteall">
+            <result name="success">
+              /admin_interface.jsp
+            </result>
+        </action>
+        
+         <action name="InsertStudent" class="nuc.action.StudentAction" method="addStudents">
+           <!--  <param name="savePath">D:/file</param>--> 
+            <result name="studentOK">
+              /upload.jsp
+            </result>
+           </action> 
+  <action name="HInsertStudent" class="nuc.action.StudentAction" method="HandaddStudent">
+ <result name="handOK" type="chain">
+  listStudent
+   </result>
+</action>
+<action name="listStudent" class="nuc.action.StudentAction" method="ListStudent">
+ <result name="ListOk">
+   /showStudent.jsp
+  </result>
+  <result name="input">
+  /welcome.jsp
+  </result>
+</action>
+ <action name="DeleteStudent" class="nuc.action.StudentAction" method="deleteStudent">
+  <result name="deleteOK" type="chain">
+  listStudent
+   </result>
+  </action>
+ <action name="findIdStudent" class="nuc.action.StudentAction" method="FindClothDetail">
+ <result name="find">
+   /updateStudent.jsp
+  </result>
+  <result name="input">
+  /welcome.jsp
+  </result>
+</action>
+  <action name="UpdateStudent" class="nuc.action.StudentAction" method="updateStudent">
+ <result name="updateOK" type="chain">
+  listStudent
+  </result>
+  <result name="input">
+  /welcome.jsp
+  </result>
+  </action>
+    </package>
+
+</struts>

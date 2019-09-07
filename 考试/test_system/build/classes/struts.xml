@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+      <package name="default" namespace="/" extends="struts-default">
+       <interceptors>
+		<interceptor name="loginInterceptor" class="interceptor.LoginInterceptor"></interceptor>
+       </interceptors>
+       	<action name="PersonalAction" class="nuc.anction.GradeAction" method="Personal">
+                   <result name="success">
+                   /person.jsp
+                   </result>
+                   
+         </action>
+         <action name="AddSubjectAction" class="nuc.anction.SubjectAction" method="AddSubject">
+                   <result name="success">
+                   /add_subject.jsp
+                   </result>
+         </action> 
+         <action name="ListSubjectAction" class="nuc.anction.SubjectAction" method="ListSubject">
+                   <result name="success">
+                   /list_problem.jsp
+                   </result>
+         </action> 
+         <action name="DeleteSubjectAction" class="nuc.anction.SubjectAction" method="DeleteSubject">
+                   <result name="success">
+                   /list_problem.jsp
+                   </result>
+         </action> 
+         <action name="ListSubjectByIdAction" class="nuc.anction.SubjectAction" method="ListSubjectById">
+                   <result name="success">
+                   /update_problem.jsp
+                   </result>
+         </action> 
+         <action name="UpdateSubjectByIdAction" class="nuc.anction.SubjectAction" method="UpdateSubjectById">
+                   <result name="success">
+                   /list_problem.jsp
+                   </result>
+         </action> 
+         <action name="FindProblemAction" class="nuc.anction.TestAction" method="FindProblem">       	
+                   <result name="success">
+                   /answer_problem.jsp
+                   </result>
+                   <result name="login">
+                   /test.jsp
+                   </result>
+         </action> 
+         <action name="AddGradeAction" class="nuc.anction.TestAction" method="AddGrade">
+         			
+                   <result name="success">
+                   /success.jsp
+                   </result>
+         </action> 
+         <action name="UpdateGradeAction" class="nuc.anction.TestAction" method="UpdateGrade">
+                   <result name="success">
+                   /exit.jsp
+                   </result>
+         </action> 
+         
+         
+        
+    		<action name="updateStuAction" class="nuc.anction.StudentAction" method="updateStu">
+				<result name="updateStuOK">/update_stu.jsp</result>
+			</action>
+			<action name="updateTeaAction" class="nuc.anction.TeacherAction" method="updateTea">
+				<result name="updateTeaOK">/update_tea.jsp</result>
+			</action>
+			<action name="findAllStuAction" class="nuc.anction.StudentAction" method="findAllStu">
+				<result name="findAllStuOK">/list_stu.jsp</result>
+			</action>
+<!-- 这里是验证码的action -->
+			<action name="createImageAction" class="nuc.anction.CreateImageAction">
+     			<result name="success" type="stream">
+           			<param name="contentType">image/jpeg</param>
+           			<param name="inputName">inputStream</param>
+     			</result>
+			</action>
+<!-- 这里是登陆注册的action -->
+			<action name="stuLoginAction" class="nuc.anction.StuLoginAction">
+				
+				<result name="input">/login.jsp</result>
+				<result name="stuLoginNO">/login.jsp</result>
+				<result name="stuLoginOK">/student_interface.jsp</result>	
+			</action>
+			<action name="teaLoginAction" class="nuc.anction.TeaLoginAction">
+				<result name="input">/login.jsp</result>
+				<result name="teaLoginNO">/login1.jsp</result>
+				<result name="teaLoginOK">/teacher_interface.jsp</result>	
+			</action>
+		
+			<action name="registAction" class="nuc.anction.StudentAction" method="insertStu">
+				<result name="input">/regist.jsp</result>
+				<result name="insertStuOK">/login.jsp</result>
+			</action>
+			<action name="addTeaAction" class="nuc.anction.TeacherAction" method="addTea">
+				<result name="addTeaOK">/teacher.jsp</result>
+			</action>
+			
+			<action name="FindgradeAction" class="nuc.anction.GradeAction" method="Findgrade">
+				<result name="success">/stu_test.jsp</result>
+			</action>
+			<action name="UpdateGrade2Action" class="nuc.anction.GradeAction" method="UpdateGrade2">
+				<result name="success">/list_stu.jsp</result>
+			</action>
+         
+         
+    </package>
+
+</struts>

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+body{
+padding: 0;
+margin: 0;
+position: relative;
+background-image: url(../images/blog.jpg);
+}
+
+#content{
+position:absolute;
+left:520px;
+width:600px;
+height:700px;
+padding: 20px auto 0px;
+border:2px solid #CACACA;
+border-radius:25px;
+text-align: center;
+line-height: 700px;
+}
+#content iframe{
+text-align: center;
+}
+#ad{
+position:absolute;
+margin:0 auto 0;
+width:260px;
+height: 710px;
+background-color: #ccc;
+left:1130px;
+text-align: center;
+}
+#ad #info{
+width:240px;
+height: 100px;
+background-color: #ebeeef;
+margin:5px auto;
+}
+#ad #info_photo{
+position: absolute;
+left:100px;
+top:80px;
+width:60px;
+height: 60px;
+border-radius: 30px;
+}
+#ad #info_photo img{
+width:60px;
+height: 60px;
+border-radius: 30px;
+}
+#info_photo:hover .hp{
+opacity: 0.5;
+}
+.goinblog:hover .goinblog_font{
+font-size: 28px;
+}
+.type a:hover{
+color: yellow;
+}
+#ad #info_attention{
+width:240px;
+height: 60px;
+background-color: #ebeeef;
+margin:50px auto;
+}
+#ad #info_attention .info_attention_left{
+width:70px;
+float:left;
+margin-left: 40px;
+line-height: 60px;
+}
+#ad a{
+text-decoration : none;
+text-align: center;
+width:180px;
+}
+#ad .type{
+text-align: center;
+margin:60px auto;
+width:200px;
+/* display: none; */
+}
+#ad .backhomepage{
+text-align: center;
+margin:80px auto 0;
+width:80px;
+}
+.type a{
+text-decoration : none;
+ font-size: 28px;
+}
+#send{
+position:absolute;
+left:478px;
+display:block;
+width:1000px;
+top:720px;
+}
+#send input[type="text"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 10px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 5px 0px;
+  width: 70%;
+  -webkit-appearance: none;
+}
+
+#send input[type="file"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 1000;
+  color: #818181;
+  padding: 10px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 5px 0px;
+  width: 18%;
+  -webkit-appearance: none;
+}
+#send input[type="submit"] {
+  outline: none;
+  font-size: 15px;
+  font-weight: 1000;
+  color: #818181;
+  padding: 10px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 10px 20px;
+  width: 92%;
+  -webkit-appearance: none;
+}
+#send select{
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #818181;
+  padding: 10px 20px;
+  background: #CACACA;
+  border: 1px solid #ccc;
+  border-radius:25px;
+  margin: 0px 0px 10px 20px;
+  width: 92%;
+  -webkit-appearance: none;
+}
+}
